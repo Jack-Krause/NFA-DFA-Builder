@@ -1,12 +1,14 @@
 public class DFA extends Automaton {
 
+    private State s; // starting state
+
     public DFA(int[] input) {
         super(input);
     }
 
     @Override
     boolean simulateInput() {
-        for (int inp : this.input) {
+        for (int inp : this.Sigma) {
             for (int i = 0; i < 32; i++) {
                 int bit = (inp >> i) & 1;
 
@@ -20,6 +22,11 @@ public class DFA extends Automaton {
         }
 
         return false;
+    }
+
+    @Override
+    State delta(State currentState, int bit) {
+        return null;
     }
 
 }

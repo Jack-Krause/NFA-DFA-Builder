@@ -1,12 +1,22 @@
 import java.util.ArrayList;
 
-public class State<String> {
+public class State {
     private String name;
-    public ArrayList<StateEdge<String, Integer>> outEdges;
+    public ArrayList<StateEdge> outEdges;
 
-    private class StateEdge<String, Integer> {
-        State state;
-        Integer value;
+    public State(String name) {
+        this.name = name;
+        this.outEdges = new ArrayList<>();
+    }
+
+    public static class StateEdge {
+        private final State state;
+        private final Integer value;
+
+        public StateEdge(State state, Integer value) {
+            this.state = state;
+            this.value = value;
+        }
     }
 
 }

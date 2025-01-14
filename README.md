@@ -9,3 +9,7 @@ i.e.,  $L \subseteq \{0, 1\}^{*}$ is enumerated by $\lambda$, 0, 1, 00, 01, 10, 
 ## Theory of Regular Languages
 
 ## Theory of Deterministic Finite Automata
+
+## Current Progress
+* Setup
+* Need to figure out how to parse set-builder notation. Early implementation will use finite subsets of regular languages

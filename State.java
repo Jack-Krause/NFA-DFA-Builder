@@ -19,4 +19,9 @@ public class State {
         }
     }
 
+    public String getName() { return this.name; }
+
+    public ArrayList<StateEdge> getOutEdges() { return this.outEdges; }
+
+
 }

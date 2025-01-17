@@ -26,7 +26,7 @@ public class DFA extends Automaton {
 
     @Override
     State delta(State currentState, int bit) {
-        return null;
+        return currentState.getOutEdges().get(bit).getState();
     }
 
 }

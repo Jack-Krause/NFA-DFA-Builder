@@ -9,6 +9,17 @@ public class State {
         this.outEdges = new ArrayList<>();
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        State state = (State) obj;
+        return name.equals(state.name);
+    }
+
+    public State next()
+
+
     public static class StateEdge {
         private final State state;
         private final Integer value;
@@ -17,6 +28,8 @@ public class State {
             this.state = state;
             this.value = value;
         }
+
+        public State getState() { return this.state; }
     }
 
     public String getName() { return this.name; }

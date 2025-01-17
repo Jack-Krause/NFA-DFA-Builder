@@ -17,7 +17,9 @@ public class State {
         return name.equals(state.name);
     }
 
-    public State next()
+    public State next(int bit) {
+        return this.outEdges.get(bit).getState();
+    }
 
 
     public static class StateEdge {
